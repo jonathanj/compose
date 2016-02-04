@@ -33,4 +33,4 @@ Installation
 
 .. code-block:: console
 
-    $ pip install compose
+    $ pip install compose-func
