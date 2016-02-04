@@ -33,3 +33,14 @@ class ComposeTests(TestCase):
         self.assertEqual(
             -3,
             compose(self.add_one, self.times_two, self.minus_three)(1))
+
+    def test_base_case(self):
+        """
+        [It is suggested](https://mathieularose.com/function-composition-in-python/#comment-1929127640)
+        to define a base case for composition: The identity function.
+        So `compose()` should be equal to the identity function *f(x) = x*.
+        """
+        f = compose() # This should not fail
+        self.assertTrue(
+            all(
+                argument == f(argument) for argument in range(-1000, 1001)))

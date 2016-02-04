@@ -1,3 +1,5 @@
+from functools import reduce
+
 def compose(*fs):
     """
     Create a function composition.
@@ -8,4 +10,4 @@ def compose(*fs):
         f(g(x))``.
     :return: I{callable} taking 1 argument.
     """
-    return reduce(lambda f, g: lambda x: f(g(x)), fs)
+    return reduce(lambda f, g: lambda x: f(g(x)), fs, lambda x: x)
