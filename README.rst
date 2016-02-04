@@ -2,6 +2,14 @@
 Compose: No frills Python function composition.
 ===============================================
 
+
+  *Important*
+  If you prefer to write Python code in a more functional style you may find the
+  toolz_ package to be more useful, it includes a `compose` function as well as
+  several functions conducive to writing functional code in Python.
+
+.. _toolz: https://pypi.python.org/pypi/toolz
+
 No magic operators or special objects just a function with unit tests. Here is a
 wonderfully contrived example to whet your appetite:
 
